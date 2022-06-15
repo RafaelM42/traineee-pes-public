@@ -1,4 +1,4 @@
-
+## Rafael Mello, Marcelo Silveira e Luiz Gabriel Lima.
 n=int(input('Termo que deseja encontrar:'))
 ultimo=1
 penultimo=1
