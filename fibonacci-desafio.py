@@ -36,7 +36,11 @@ else:
     termos.append(1)
     pos.append(1)
     pos.append(2)
-    
+##lista para números   
+col =[]
+#Cores selecionadas para o gráfico
+colors = ["red", "yellow", "orange", "pink", "purple", "blue"]
+
 ## Laço de repetição para printar demais números até 
 ## o que foi determinado pelo usuário.
 while (count <= n):
@@ -50,9 +54,15 @@ while (count <= n):
     count+=1
     print(termo)
 
-##Comandos para plotar o gráfico
+##Vetor para cores
+for i in range(0, len(pos)):
+    col.append(i)
 
-ax.plot(pos, termos)    #chama a plotagem (x,y)
+ 
+colormap = mpl.colors.ListedColormap(colors)  
+
+##Comandos para plotar o gráfico
+plt.scatter(pos, termos, c=col, cmap=colormap)    #chama a plotagem (x,y)
 plt.xlabel('Posição dos termos')    #Título do eixo x
 plt.ylabel('Termo da sequência')    #Título do eixo y
 plt.title('Fibonacci')  #Título do gráfico
